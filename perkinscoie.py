@@ -21,16 +21,16 @@ def fetch_alerts():
     return new_items
 
 def main():
-    print(" Monitoring Bloomberg for 'Perkins Coie' stories...\n")
+    print("Monitoring Bloomberg for 'Perkins Coie' stories...\n")
     while True:
         try:
             new_articles = fetch_alerts()
             if new_articles:
-                print(f"\n📰 {len(new_articles)} new article(s) found:\n")
+                print(f"\n {len(new_articles)} new article(s) found:\n")
                 for title, link in new_articles:
                     print(f"- {title}\n  {link}\n")
             else:
-                print("⏳ No new articles.")
+                print("No new articles.")
         except Exception as e:
             print(f" Error fetching feed: {e}")
         time.sleep(CHECK_INTERVAL)
