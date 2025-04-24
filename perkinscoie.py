@@ -21,7 +21,7 @@ def fetch_alerts():
     return new_items
 
 def main():
-    print("🔔 Monitoring Bloomberg for 'Perkins Coie' stories...\n")
+    print(" Monitoring Bloomberg for 'Perkins Coie' stories...\n")
     while True:
         try:
             new_articles = fetch_alerts()
